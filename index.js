@@ -8,5 +8,9 @@ app.use(express.static('public'));
 app.get('/send-id', function(req, res) {
     res.json({id: myLiffId});
 });
+app.get('/home', function(req, res) {
+    console.log('get data');
+    res.send(app.data);
+});
 
 app.listen(port, () => console.log(`app listening on port ${port}!`));
